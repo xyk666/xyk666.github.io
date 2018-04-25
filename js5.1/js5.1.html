@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>example</title>
+</head>
+<body>
+<a href="http://www.hao123.com">´ò¿ªhao123.com</a>
+<script>
+function popup(winURL){
+window.open(winURL,"popup","width=300,height=300");
+}
+document.getElementsByTagName("a")[0].onclick=function()
+{popup(this.href);return false;};
+</script>
+</body>
+</html>
