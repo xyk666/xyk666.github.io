@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>example</title>
+</head>
+<body>
+<a href="http://www.baidu.com">´ò¿ªbaidu.com</a>
+<script>
+function popup(winURL){
+window.open(winURL,"popup","width=300,height=300");
+}
+window.onload=function()
+{
+ if(!document.getElementsByTagName) return false;
+ var lnks=document.getElementsByTagName("a");
+for (var i=0; i<lnks.length;i++){
+if(lnks[i].getAttribute("class") == "popup"){
+lnks[i].onclick=function(){
+popup(this.getAttribute("href"));return false;}
+}
+}
+}
+</script>
+</body>
+</html>
